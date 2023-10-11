@@ -1,23 +1,24 @@
-		
-def Accept():
-	print("Enter one number : ")
-	no = int(input())
-	
-	def DisplayEven(no):
-		icnt=0
-		i=1
-		while(icnt!=no):
-			if(i%2==0):
-				print(i)
-				icnt+=1
-				i+=1
-			else:
-				i+=1
-	
-	return DisplayEven(no)
+def Add(no,eles):
+	sum1 = 0
+	for i in range(0,no):
+		sum1 = sum1 + eles[i]
+
+	return sum1
 
 def main():
-	Accept()
+	no = int(input("Enter no. of elements : "))
+	
+	eles = list()
+	
+	print("Enter Elements : ")
+	
+	for i in range(0,no):
+		val = int(input())
+		eles.append(val)
+		
+	sum2 = Add(no,eles)
+	
+	print("Addition is : ",sum2)
 
 if __name__ == "__main__":
 	main()

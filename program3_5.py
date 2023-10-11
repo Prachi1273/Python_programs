@@ -1,19 +1,25 @@
-	
-def chkvwl(ch):
-	if(ch=='a' or ch=='e' or ch=='i' or ch=='o' or ch=='u' or ch=='A' or ch=='E' or ch=='I' or ch=='O' or ch=='U'):
-		return True	
-	
+import MarvellousNum
+
+def ListPrime(ele,arr):
+	for i in range(0,ele):
+		val = int(input())
+		arr.append(val)
+
 def main():
-	print("Enter one character : ")
-	ch = input()
+	ele = int(input("Enter number of elements : "))
 	
-	ret = chkvwl(ch)
-	if(ret==True):
-		print("Vowel")
-		print()
-	else:
-		print("NOT vowel")
-		print()
+	arr = list()
+	
+	ListPrime(ele,arr)
+	
+	print("Elements are : ")
+	
+	for i in range(0,ele):
+		print(arr[i],end = "  ")
+		
+	ans = MarvellousNum.chkPrime(ele,arr)
+	
+	print("Addition is : ",ans)
 	
 if __name__ == "__main__":
 	main()

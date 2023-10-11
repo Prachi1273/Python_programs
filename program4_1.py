@@ -1,18 +1,12 @@
 
-def FactMult(no):
-	mult = 1
-	for i in range(1,no):
-		if(no%i==0):
-			mult = mult*i
-	return mult
+powerof = lambda no : 2**no
 
 def main():
-	iValue = int(input("Enter one number : "))
+	no = int(input("Enter no. : "))
 	
-	Ans = FactMult(iValue)
+	ret = powerof(no)
 	
-	print("Multiplication of factors is : ",Ans)
-	
+	print(ret)
 
-if __name__  == "__main__":
+if __name__ == "__main__":
 	main()

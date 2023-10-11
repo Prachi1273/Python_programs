@@ -1,14 +1,13 @@
 
-def FactMult(no):
-	mult = 1
-	for i in range(no,1,-1):
-		if(no%i==0):
-			print(i)
+multi = lambda no1,no2 : no1*no2
 
 def main():
-	iValue = int(input("Enter one number : "))
+	no1 = int(input("Enter first no. : "))
+	no2 = int(input("Enter second no. : "))
 	
-	FactMult(iValue)
+	ret = multi(no1,no2)
+	
+	print(ret)
 
-if __name__  == "__main__":
+if __name__ == "__main__":
 	main()

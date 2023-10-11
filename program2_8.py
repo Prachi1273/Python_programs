@@ -1,18 +1,15 @@
-
-def f(no):
-	fact = 1
+def Display(no):
 	for i in range(1,no+1):
-		fact = fact * i
-	return fact	
-	
+		for j in range(1,no+1):
+			if(j<=i):
+				print(j,end=" ")
+		print()
+
 def main():
 	print("Enter number : ")
 	no = int(input())
 	
-
-	ret = f(no)
-	
-	print(ret)
+	Display(no)
 
 if __name__ == "__main__":
 	main()

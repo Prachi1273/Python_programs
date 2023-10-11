@@ -1,11 +1,8 @@
 def chknum(no):
-	if(no==0):
-		print("Zero")
-	elif(no>0):
-		print("Positive number")
-	elif(no<0):
-		print("Negative number")
-	
+	if(no%5==0):
+		print("True")
+	else:
+		print("False")
 
 def main():
 	print("Enter number : ")
