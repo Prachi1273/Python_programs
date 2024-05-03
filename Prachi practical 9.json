@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "toc-autonumbering": true,
+    "toc-showmarkdowntxt": true,
+    "toc-showcode": false
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": "#",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "from sympy import *",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "A = Matrix([[1,-6,3],[3,-1,1],[-1,9,-1]])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P,D = A.diagonalize()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "execution_count": 5,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[    ((1663 + 9*sqrt(35761))**(1/3)*(-256*2**(1/3) + (1 + sqrt(3)*I)*(4 + 2**(2/3)*(1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761))**(1/3))**2 - 16*(1 + sqrt(3)*I)**2*(55 + 2**(2/3)*(1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761)) + 4096*2**(1/3)*(1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(2/3))/(3696*(1 + sqrt(3)*I)**2*(1663 + 9*sqrt(35761))),    (4096*2**(1/3)*(1 - sqrt(3)*I)*(1663 + 9*sqrt(35761))**(2/3) + 16*(-55 + 2**(2/3)*(-1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1 - sqrt(3)*I)**2*(1663 + 9*sqrt(35761)) + (1663 + 9*sqrt(35761))**(1/3)*(-256*2**(1/3) + (1 - sqrt(3)*I)*(4 + 2**(2/3)*(1 - sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761))**(1/3))**2)/(3696*(1 - sqrt(3)*I)**2*(1663 + 9*sqrt(35761))), -1535*2**(2/3)*(1663 + 9*sqrt(35761))**(1/3)/29568 - 3*2**(1/3)*sqrt(35761)*(1663 + 9*sqrt(35761))**(2/3)/157696 - 118/231 + 3*2**(2/3)*sqrt(35761)*(1663 + 9*sqrt(35761))**(1/3)/9856 + 2687*2**(1/3)*(1663 + 9*sqrt(35761))**(2/3)/473088],\n[((1663 + 9*sqrt(35761))**(1/3)*(-256*2**(1/3) + (1 + sqrt(3)*I)*(4 + 2**(2/3)*(1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761))**(1/3))**2 + 36*(1 + sqrt(3)*I)**2*(44 - 9*2**(2/3)*(1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761)) + 82944*2**(1/3)*(1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(2/3))/(33264*(1 + sqrt(3)*I)**2*(1663 + 9*sqrt(35761))), (82944*2**(1/3)*(1 - sqrt(3)*I)*(1663 + 9*sqrt(35761))**(2/3) + 36*(1 - sqrt(3)*I)**2*(44 + 9*2**(2/3)*(-1 + sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761)) + (1663 + 9*sqrt(35761))**(1/3)*(-256*2**(1/3) + (1 - sqrt(3)*I)*(4 + 2**(2/3)*(1 - sqrt(3)*I)*(1663 + 9*sqrt(35761))**(1/3))*(1663 + 9*sqrt(35761))**(1/3))**2)/(33264*(1 - sqrt(3)*I)**2*(1663 + 9*sqrt(35761))),   -79*2**(1/3)*sqrt(35761)*(1663 + 9*sqrt(35761))**(2/3)/946176 + 4/231 + 2**(2/3)*sqrt(35761)*(1663 + 9*sqrt(35761))**(1/3)/29568 + 377*2**(2/3)*(1663 + 9*sqrt(35761))**(1/3)/29568 + 14825*2**(1/3)*(1663 + 9*sqrt(35761))**(2/3)/946176],\n[                                                                                                                                                                                                                                                                                                                                                                                              1,                                                                                                                                                                                                                                                                                                                                                                                                1,                                                                                                                                                                                                                                           1]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}\\frac{\\sqrt[3]{1663 + 9 \\sqrt{35761}} \\left(- 256 \\cdot \\sqrt[3]{2} + \\left(1 + \\sqrt{3} i\\right) \\left(4 + 2^{\\frac{2}{3}} \\cdot \\left(1 + \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right)^{2} - 16 \\left(1 + \\sqrt{3} i\\right)^{2} \\cdot \\left(55 + 2^{\\frac{2}{3}} \\cdot \\left(1 + \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\left(1663 + 9 \\sqrt{35761}\\right) + 4096 \\cdot \\sqrt[3]{2} \\cdot \\left(1 + \\sqrt{3} i\\right) \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}}}{3696 \\left(1 + \\sqrt{3} i\\right)^{2} \\cdot \\left(1663 + 9 \\sqrt{35761}\\right)} & \\frac{4096 \\cdot \\sqrt[3]{2} \\cdot \\left(1 - \\sqrt{3} i\\right) \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}} + 16 \\left(-55 + 2^{\\frac{2}{3}} \\left(-1 + \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\left(1 - \\sqrt{3} i\\right)^{2} \\cdot \\left(1663 + 9 \\sqrt{35761}\\right) + \\sqrt[3]{1663 + 9 \\sqrt{35761}} \\left(- 256 \\cdot \\sqrt[3]{2} + \\left(1 - \\sqrt{3} i\\right) \\left(4 + 2^{\\frac{2}{3}} \\cdot \\left(1 - \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right)^{2}}{3696 \\left(1 - \\sqrt{3} i\\right)^{2} \\cdot \\left(1663 + 9 \\sqrt{35761}\\right)} & - \\frac{1535 \\cdot 2^{\\frac{2}{3}} \\sqrt[3]{1663 + 9 \\sqrt{35761}}}{29568} - \\frac{3 \\cdot \\sqrt[3]{2} \\sqrt{35761} \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}}}{157696} - \\frac{118}{231} + \\frac{3 \\cdot 2^{\\frac{2}{3}} \\sqrt{35761} \\sqrt[3]{1663 + 9 \\sqrt{35761}}}{9856} + \\frac{2687 \\cdot \\sqrt[3]{2} \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}}}{473088}\\\\\\frac{\\sqrt[3]{1663 + 9 \\sqrt{35761}} \\left(- 256 \\cdot \\sqrt[3]{2} + \\left(1 + \\sqrt{3} i\\right) \\left(4 + 2^{\\frac{2}{3}} \\cdot \\left(1 + \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right)^{2} + 36 \\left(1 + \\sqrt{3} i\\right)^{2} \\cdot \\left(44 - 9 \\cdot 2^{\\frac{2}{3}} \\cdot \\left(1 + \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\left(1663 + 9 \\sqrt{35761}\\right) + 82944 \\cdot \\sqrt[3]{2} \\cdot \\left(1 + \\sqrt{3} i\\right) \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}}}{33264 \\left(1 + \\sqrt{3} i\\right)^{2} \\cdot \\left(1663 + 9 \\sqrt{35761}\\right)} & \\frac{82944 \\cdot \\sqrt[3]{2} \\cdot \\left(1 - \\sqrt{3} i\\right) \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}} + 36 \\left(1 - \\sqrt{3} i\\right)^{2} \\cdot \\left(44 + 9 \\cdot 2^{\\frac{2}{3}} \\left(-1 + \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\left(1663 + 9 \\sqrt{35761}\\right) + \\sqrt[3]{1663 + 9 \\sqrt{35761}} \\left(- 256 \\cdot \\sqrt[3]{2} + \\left(1 - \\sqrt{3} i\\right) \\left(4 + 2^{\\frac{2}{3}} \\cdot \\left(1 - \\sqrt{3} i\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right) \\sqrt[3]{1663 + 9 \\sqrt{35761}}\\right)^{2}}{33264 \\left(1 - \\sqrt{3} i\\right)^{2} \\cdot \\left(1663 + 9 \\sqrt{35761}\\right)} & - \\frac{79 \\cdot \\sqrt[3]{2} \\sqrt{35761} \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}}}{946176} + \\frac{4}{231} + \\frac{2^{\\frac{2}{3}} \\sqrt{35761} \\sqrt[3]{1663 + 9 \\sqrt{35761}}}{29568} + \\frac{377 \\cdot 2^{\\frac{2}{3}} \\sqrt[3]{1663 + 9 \\sqrt{35761}}}{29568} + \\frac{14825 \\cdot \\sqrt[3]{2} \\left(1663 + 9 \\sqrt{35761}\\right)^{\\frac{2}{3}}}{946176}\\\\1 & 1 & 1\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "D",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "execution_count": 6,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[-1/3 + (-1/2 - sqrt(3)*I/2)*(1663/54 + sqrt(35761)/6)**(1/3) - 32/(9*(-1/2 - sqrt(3)*I/2)*(1663/54 + sqrt(35761)/6)**(1/3)),                                                                                                                           0,                                                                                 0],\n[                                                                                                                          0, -1/3 - 32/(9*(-1/2 + sqrt(3)*I/2)*(1663/54 + sqrt(35761)/6)**(1/3)) + (-1/2 + sqrt(3)*I/2)*(1663/54 + sqrt(35761)/6)**(1/3),                                                                                 0],\n[                                                                                                                          0,                                                                                                                           0, -32/(9*(1663/54 + sqrt(35761)/6)**(1/3)) - 1/3 + (1663/54 + sqrt(35761)/6)**(1/3)]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}- \\frac{1}{3} + \\left(- \\frac{1}{2} - \\frac{\\sqrt{3} i}{2}\\right) \\sqrt[3]{\\frac{1663}{54} + \\frac{\\sqrt{35761}}{6}} - \\frac{32}{9 \\left(- \\frac{1}{2} - \\frac{\\sqrt{3} i}{2}\\right) \\sqrt[3]{\\frac{1663}{54} + \\frac{\\sqrt{35761}}{6}}} & 0 & 0\\\\0 & - \\frac{1}{3} - \\frac{32}{9 \\left(- \\frac{1}{2} + \\frac{\\sqrt{3} i}{2}\\right) \\sqrt[3]{\\frac{1663}{54} + \\frac{\\sqrt{35761}}{6}}} + \\left(- \\frac{1}{2} + \\frac{\\sqrt{3} i}{2}\\right) \\sqrt[3]{\\frac{1663}{54} + \\frac{\\sqrt{35761}}{6}} & 0\\\\0 & 0 & - \\frac{32}{9 \\sqrt[3]{\\frac{1663}{54} + \\frac{\\sqrt{35761}}{6}}} - \\frac{1}{3} + \\sqrt[3]{\\frac{1663}{54} + \\frac{\\sqrt{35761}}{6}}\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "B = Matrix([[1,-1,1],[-1,1,-1],[1,-1,1]])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P,D = B.diagonalize()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "execution_count": 9,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[1, -1,  1],\n[1,  0, -1],\n[0,  1,  1]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}1 & -1 & 1\\\\1 & 0 & -1\\\\0 & 1 & 1\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "D",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "execution_count": 10,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[0, 0, 0],\n[0, 0, 0],\n[0, 0, 3]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}0 & 0 & 0\\\\0 & 0 & 0\\\\0 & 0 & 3\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "C = Matrix([[1,2,2],[2,1,2],[2,2,1]])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P,D = C.diagonalize()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 13,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "execution_count": 14,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[-1, -1, 1],\n[ 1,  0, 1],\n[ 0,  1, 1]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}-1 & -1 & 1\\\\1 & 0 & 1\\\\0 & 1 & 1\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "D",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "execution_count": 15,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[-1,  0, 0],\n[ 0, -1, 0],\n[ 0,  0, 5]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}-1 & 0 & 0\\\\0 & -1 & 0\\\\0 & 0 & 5\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "S = Matrix([[0,0],[0,1]])",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 24,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P,D=S.diagonalize()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 25,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "P",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "execution_count": 26,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[1, 0],\n[0, 1]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}1 & 0\\\\0 & 1\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "D",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "execution_count": 27,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "Matrix([\n[0, 0],\n[0, 1]])",
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}0 & 0\\\\0 & 1\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
